@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine on
-	RewriteBase /~frki13/php_mvc/Projekt_Drygia/
+	#RewriteBase /~frki13/php_mvc/Projekt_Drygia/
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule (.*) index.php/$1 [NC,L]
