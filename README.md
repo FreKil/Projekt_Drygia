@@ -8,7 +8,6 @@
 		<li>Clona ramverket från följande adress https://github.com/FreKil/Projekt_Drygia.git</li>
 		<li>Gör mappen och filen i site/data skrivbar genom kommandot chmod 777 mappen(dvs sökvägen till mappen)</li>
 		<li>Peka sökvägen på RewriteBase i .htaccess-filen till ramverkets katalog.</li>
-		<li>Gå till ramverkets startsida och logga in(inloggningslänk finns uppe till höger) med användarnamnen: root och lösenordet: root</li>
 		<li>För att installera modulerna så surfar man till adressen http://ramverkets-adress/module/install</li>
 	</ol>
 	Ramverkets databas bör nu vara installerat och konfigurerat.
