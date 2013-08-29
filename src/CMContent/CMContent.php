@@ -61,7 +61,6 @@ class CMContent extends CObject implements IHasSQL, IModule, ArrayAccess {
 	// Init the database and create appropriate tables.
 	public function Init() {
 		try {
-			$this->user['id'] = (isset($this->user['id'])) ? $this->user['id'] : 1;
 			$this->db->ExecuteQuery(self::SQL('drop table content'));
 			$this->db->ExecuteQuery(self::SQL('create table content'));
 			$this->db->ExecuteQuery(self::SQL('insert content'), array('hello-world', 'post', 'Hello World', "This is a demo post.\n\nThis is another row in this demo post.", 'plain', $this->user['id']));
@@ -87,6 +86,7 @@ class CMContent extends CObject implements IHasSQL, IModule, ArrayAccess {
 				try {
 					$this->db->ExecuteQuery(self::SQL('drop table content'));
 					$this->db->ExecuteQuery(self::SQL('create table content'));
+					$this->user['id'] = (isset($this->user['id'])) ? $this->user['id'] : 1;
 					$this->db->ExecuteQuery(self::SQL('insert content'), array('hello-world', 'post', 'Hello World', "This is a demo post.\n\nThis is another row in this demo post.", 'plain', $this->user['id']));
 					$this->db->ExecuteQuery(self::SQL('insert content'), array('hello-world-again', 'post', 'Hello World Again', "This is another demo post.\n\nThis is another row in this demo post.", 'plain', $this->user['id']));
 					$this->db->ExecuteQuery(self::SQL('insert content'), array('hello-world-once-more', 'post', 'Hello World Once More', "This is one more demo post.\n\nThis is another row in this demo post.", 'plain', $this->user['id']));
